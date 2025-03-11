@@ -167,7 +167,7 @@ if selected_stage == "Business Understanding":
         - BMI (indeks massa tubuh)
         - hypertension (0 = tidak, 1 = ya)
         - heart disease (0 = tidak, 1 = ya)
-        - smoking history ("No Info = Tidak Ada Info", "Never = Tidak Pernah", "Former = Mantan", "Current = Saat Ini", "Not Current = Tidak Saat Ini".)
+        - smoking history (No Info = Tidak Ada Info, Never = Tidak Pernah, Former = Mantan, Current = Saat Ini, Not Current = Tidak Saat Ini)
         - HbA1c level (rata-rata kadar gula darah dalam 2-3 bulan terakhir)
         - blood glucose level (kadar gula darah saat ini)
     """)
