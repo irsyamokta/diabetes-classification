@@ -94,6 +94,13 @@ st.markdown(
             background-color: #4CAF50;
             color: white;
         }
+        
+        div.stButton > button {
+            margin-top: 10px;
+            width: 100%;
+            height: 40px;
+            font-size: 18px;
+        }
     </style>
     """,
     unsafe_allow_html=True,
@@ -185,7 +192,9 @@ elif selected_stage == "Data Understanding":
 
     # Mengecek Missing Value
     st.subheader("Missing Values per Kolom")
-    missing_values = df.isna().sum()
+    missing_values = df.isna().sum().reset_index()
+    missing_values.columns = ["Kolom", "Jumlah"]
+    missing_values["Jumlah"] = missing_values["Jumlah"].astype(str)
     st.write(missing_values)
 
     # Menghitung Data Duplicate
@@ -222,7 +231,11 @@ elif selected_stage == "Data Understanding":
 
     # Mengecek Tipe Data
     st.subheader("Tipe Data")
-    st.write(df.dtypes)
+    df_types = pd.DataFrame({
+        "Kolom": df.columns,
+        "Tipe Data": df.dtypes.values
+    })
+    st.write(df_types)
 
     # Visualisasi Distribusi Variabel yang Mempengaruhi Diabetes
     st.subheader("Distribusi Variabel yang Mempengaruhi Diabetes")
