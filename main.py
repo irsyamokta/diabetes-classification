@@ -250,7 +250,7 @@ elif selected_stage == "Data Understanding":
     
     sns.set_style("whitegrid")
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 12))
+    fig, axes = plt.subplots(2, 2, figsize=(10, 10))
     fig.suptitle("Distribusi Variabel yang Mempengaruhi Diabetes", fontsize=16, fontweight='bold')
 
     # Distribusi Usia
@@ -293,7 +293,7 @@ elif selected_stage == "Data Understanding":
 
     # Visualisasi Hypertension vs Diabetes
     st.subheader("Hypertension vs Diabetes")
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 5))
     ax_hypertension = sns.countplot(data=df, x="hypertension", hue="diabetes")
     plt.title("Hypertension vs Diabetes")
 
@@ -317,7 +317,7 @@ elif selected_stage == "Data Understanding":
 
     # 8️⃣ Visualisasi Heart Disease vs Diabetes
     st.subheader("Heart Disease vs Diabetes")
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 5))
     ax_heart_disease = sns.countplot(data=df, x="heart_disease", hue="diabetes")
     plt.title("Heart Disease vs Diabetes")
 
@@ -370,9 +370,34 @@ elif selected_stage == "Data Preparation":
 
     # **🔹 5. Oversampling dengan SMOTE**
     st.subheader("5️⃣ Melakukan Oversampling (SMOTE)")
-    st.write("Distribusi sebelum SMOTE:", dict(Counter(y)))
+    
+    fig, axes = plt.subplots(1, 2, figsize=(12, 4))
+
+    labels = ['0 (Negatif)', '1 (Positif)']
+
+    before_counts = dict(Counter(y))
+
+    axes[0].bar(labels, before_counts.values(), color=['blue', 'red'])
+    axes[0].set_title("Sebelum SMOTE")
+    axes[0].set_xlabel("Kelas")
+    axes[0].set_ylabel("Jumlah Sampel")
+
+    for i, v in enumerate(before_counts.values()):
+        axes[0].text(i, v + 1, str(v), ha='center', fontsize=12)
+        
     X_resampled, y_resampled = oversample_smote(X, y)
-    st.write("Distribusi setelah SMOTE:", dict(Counter(y_resampled)))
+
+    after_counts = dict(Counter(y_resampled))
+    
+    axes[1].bar(labels, after_counts.values(), color=['blue', 'red'])
+    axes[1].set_title("Setelah SMOTE")
+    axes[1].set_xlabel("Kelas")
+    axes[1].set_ylabel("Jumlah Sampel")
+
+    for i, v in enumerate(after_counts.values()):
+        axes[1].text(i, v + 1, str(v), ha='center', fontsize=12)
+
+    st.pyplot(fig)
 
     # **🔹 6. Train-Test Split**
     st.subheader("6️⃣ Membagi Dataset - Train Test Split (80:20)")
