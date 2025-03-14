@@ -108,7 +108,7 @@ st.markdown(
 
 # Sidebar
 with st.sidebar:
-    st.title("Prediksi Diabetes Berdasarkan Faktor Medis Pasien")
+    st.title("Klasifikasi Diabetes Berdasarkan Faktor Medis Pasien")
     
     stages = [
         "Business Understanding", 
@@ -134,11 +134,11 @@ if selected_stage == "Business Understanding":
     st.subheader("1️⃣ Define Business Objectives")
     st.write("""
     **Tujuan utama:**
-        Membangun model machine learning untuk memprediksi diabetes berdasarkan faktor medis pasien.
+        Membangun model machine learning untuk mengklasifikasi risiko diabetes berdasarkan faktor medis pasien.
 
     **Tujuan spesifik:**
     - Membantu tenaga medis dalam mendeteksi dini diabetes pada pasien berdasarkan riwayat kesehatan.
-    - Mengurangi jumlah kasus diabetes yang tidak terdiagnosis dengan memberikan rekomendasi berdasarkan prediksi model.
+    - Mengurangi jumlah kasus diabetes yang tidak terdiagnosis dengan memberikan rekomendasi berdasarkan klasifikasi model.
     - Meningkatkan efektivitas dalam perencanaan pengobatan dan intervensi dini.
     """)
     
@@ -148,7 +148,7 @@ if selected_stage == "Business Understanding":
     - Diabetes merupakan penyakit kronis yang berkembang secara perlahan dan sering kali tidak terdeteksi hingga mencapai tahap lanjut.
     - Faktor risiko utama meliputi usia, hipertensi, penyakit jantung, BMI, dan kadar gula darah.
     - Diagnosis diabetes biasanya dilakukan melalui tes HbA1c dan tes kadar glukosa darah yang membutuhkan biaya dan waktu.
-    - Jika dapat diprediksi lebih awal, pasien berisiko tinggi dapat diberi intervensi lebih cepat melalui pola makan, olahraga, dan terapi medis.
+    - Jika dapat diidentifikasi lebih awal, pasien berisiko tinggi dapat diberi intervensi lebih cepat melalui pola makan, olahraga, dan terapi medis.
 
     **Masukan dari stakeholder:**
     - **Dokter & tenaga medis:** Memerlukan alat bantu untuk mengidentifikasi pasien yang berisiko tinggi.
@@ -177,7 +177,7 @@ if selected_stage == "Business Understanding":
     **Kriteria keberhasilan proyek:**
     - Akurasi model minimal 85% dalam memprediksi diabetes.
     - Precision dan recall minimal 80% untuk menghindari banyaknya false positives dan false negatives.
-    - Dapat memberikan interpretasi prediksi dan rekomendasi berdasarkan sumber yang valid seperti jurnal.
+    - Dapat memberikan interpretasi klasifikasi dan rekomendasi berdasarkan sumber yang valid seperti jurnal.
     - Model yang ringan dan cepat sehingga bisa digunakan dalam sistem kesehatan berbasis web atau mobile.
     """)
     
