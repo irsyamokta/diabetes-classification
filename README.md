@@ -55,7 +55,7 @@ Berdasarkan hasil evaluasi, **KNN memberikan akurasi lebih tinggi dibandingkan S
 4. Buka file `diabetes_classification.ipynb` dan jalankan setiap sel untuk melihat hasilnya.
 
 ## Deployment
-Proyek ini sudah publik dan bisa diakses melalui tautan berikut https://diabete-predict.streamlit.app/
+Proyek ini sudah publik dan bisa diakses melalui tautan berikut https://diabete-classification.streamlit.app/
 
 ## Kontribusi
 Kontribusi sangat diterima! Jika ingin menambahkan fitur atau meningkatkan model, silakan buat **pull request** atau buka **issue**.
