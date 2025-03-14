@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 from collections import Counter
 
 # Set page title
-st.set_page_config(page_title="Diabetes Prediction Dashboard", layout="wide")
+st.set_page_config(page_title="Diabetes Classifiaction", layout="wide")
 
 # Dataset
 DATASET_PATH = "./dataset/diabetes_dataset.csv"
