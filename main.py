@@ -563,7 +563,7 @@ elif selected_stage == "Evaluation":
     
 elif selected_stage == "Deployment":
     st.title("Deployment")
-    st.write("Tahap terakhir adalah menerapkan model ke dalam lingkungan produksi agar dapat digunakan oleh pengguna akhir. Model yang sudah dilatih dan dievaluasi akan dikemas dalam bentuk API atau aplikasi berbasis web menggunakan Streamlit. API akan menerima input dari pengguna, memproses data, menjalankan model prediksi, dan mengembalikan hasil prediksi secara real-time. Dengan deployment ini, pengguna dapat dengan mudah mengakses layanan prediksi diabetes tanpa harus memiliki pengetahuan teknis tentang Machine Learning.")
+    st.write("Tahap terakhir adalah menerapkan model ke dalam lingkungan produksi agar dapat digunakan oleh pengguna akhir. Model yang sudah dilatih dan dievaluasi akan dikemas dalam bentuk aplikasi berbasis web menggunakan Streamlit. Dengan deployment ini, pengguna dapat dengan mudah mengakses layanan prediksi diabetes tanpa harus memiliki pengetahuan teknis tentang Machine Learning.")
 
     # **Form Input Data**
     st.header("Masukkan Data")
