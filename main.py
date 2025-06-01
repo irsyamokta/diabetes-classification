@@ -605,7 +605,7 @@ elif selected_stage == "Deployment":
     input_array = np.array(list(input_data.values())).reshape(1, -1)
 
     # **Prediksi**
-    if st.button("Prediksi"):
+    if st.button("Submit"):
         prediction = model_knn.predict(input_array)
         result = "🟥 **Positif Diabetes**" if prediction[0] == 1 else "🟩 **Negatif Diabetes**"
 
