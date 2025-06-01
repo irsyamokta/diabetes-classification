@@ -340,7 +340,7 @@ elif selected_stage == "Data Understanding":
     
 elif selected_stage == "Data Preparation":
     st.header("Data Preparation")
-    st.write("Tahap ini melibatkan pemrosesan data sebelum dimasukkan ke dalam model Machine Learning. Data yang kotor atau tidak terstruktur akan dibersihkan, termasuk menangani nilai yang hilang, encoding variabel kategori, membersihkan outlier, dan melakukan oversampling agar data target seimbang serta membagi data menjadi set pelatihan dan pengujian. Misalnya, pada proyek prediksi diabetes, variabel seperti gender dan smoking history perlu diubah ke dalam format numerik agar dapat diproses oleh algoritma Machine Learning.")
+    st.write("Tahap ini melibatkan pemrosesan data sebelum dimasukkan ke dalam model Machine Learning. Data yang kotor atau tidak terstruktur akan dibersihkan, termasuk menangani nilai yang hilang, encoding variabel kategori, membersihkan outlier, dan melakukan oversampling agar data target seimbang serta membagi data menjadi set pelatihan dan pengujian. Misalnya, pada proyek klasifikasi diabetes, variabel seperti gender dan smoking history perlu diubah ke dalam format numerik agar dapat diproses oleh algoritma Machine Learning.")
     
      # **🔹 1. Remove Duplicates**
     st.subheader("1️⃣ Pembersihan Data - Remove Duplicates")
@@ -407,7 +407,7 @@ elif selected_stage == "Data Preparation":
 
 elif selected_stage == "Modeling":
     st.header("Modeling")
-    st.write("Setelah data siap, kami mulai membangun model Machine Learning. Berbagai algoritma seperti K-Nearest Neighbors (KNN) dan Support Vector Machine (SVM) dapat digunakan untuk membuat prediksi. Model akan dilatih menggunakan data yang telah diproses, dan parameter model akan dioptimalkan untuk meningkatkan kinerjanya. Pada tahap ini, dilakukan eksperimen dengan berbagai model dan hyperparameter tuning untuk mendapatkan hasil terbaik.")
+    st.write("Setelah data siap, selanjutnya mulai membangun model Machine Learning. Berbagai algoritma seperti K-Nearest Neighbors (KNN) dan Support Vector Machine (SVM) dapat digunakan untuk membuat klasifikasi. Model akan dilatih menggunakan data yang telah diproses. Pada tahap ini, dilakukan eksperimen dengan dua model algoritma untuk mendapatkan hasil terbaik.")
     
     # Penjelasan Inisialisasi Model
     st.subheader("Inisialisasi Model")
@@ -611,7 +611,7 @@ elif selected_stage == "Deployment":
 
         # Interpretasi & Rekomendasi
         if prediction[0] == 1:
-            interpretation = "⚠️ **Model memprediksi bahwa Anda memiliki kemungkinan mengalami diabetes.**"
+            interpretation = "⚠️ **Model mengklasifikasikan bahwa Anda memiliki kemungkinan mengalami diabetes.**"
             follow_up = """
             **Rekomendasi:**
             - **Konsultasi dengan Dokter** untuk pemeriksaan lebih lanjut.
@@ -620,7 +620,7 @@ elif selected_stage == "Deployment":
             - **Cek Kesehatan Rutin** untuk memantau kadar HbA1c dan glukosa darah.
             """
         else:
-            interpretation = "✅ **Model memprediksi bahwa Anda tidak memiliki diabetes.**"
+            interpretation = "✅ **Model mengklasifikasikan bahwa Anda tidak memiliki diabetes.**"
             follow_up = """
             **Rekomendasi:**
             - **Tetap Jaga Pola Hidup Sehat** dengan konsumsi makanan seimbang dan olahraga rutin.
@@ -629,7 +629,7 @@ elif selected_stage == "Deployment":
             """
 
         # **Tampilkan Hasil**
-        st.subheader("Hasil Prediksi")
+        st.subheader("Hasil Klasifikasi Diabetes")
         st.write(result)
         st.write(interpretation)
         st.info(follow_up)
