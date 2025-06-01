@@ -199,7 +199,6 @@ elif selected_stage == "Data Understanding":
 
     # Menghitung Data Duplicate
     duplicates = df.duplicated().sum()
-    st.subheader("Data Duplicates")
     st.write(f"**Total Data Duplicate:** {duplicates}")
 
     # Mengecek Outlier dengan Boxplot
