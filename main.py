@@ -175,7 +175,7 @@ if selected_stage == "Business Understanding":
     st.subheader("4️⃣ Determine Project Objectives")
     st.write("""
     **Kriteria keberhasilan proyek:**
-    - Akurasi model minimal 85% dalam memprediksi diabetes.
+    - Akurasi model minimal 85% dalam mengklasifikasi diabetes.
     - Precision dan recall minimal 80% untuk menghindari banyaknya false positives dan false negatives.
     - Dapat memberikan interpretasi klasifikasi dan rekomendasi berdasarkan sumber yang valid seperti jurnal.
     - Model yang ringan dan cepat sehingga bisa digunakan dalam sistem kesehatan berbasis web atau mobile.
