@@ -355,7 +355,7 @@ elif selected_stage == "Data Preparation":
 
     # **🔹 3. Encoding Categorical Variables**
     st.subheader("3️⃣ Encode Categorical Variables")
-    categorical_columns = ['gender', 'smoking_history', 'hypertension', 'heart_disease', 'diabetes']
+    categorical_columns = ['gender', 'smoking_history', 'hypertension', 'heart_disease']
     df_encoded, label_encoders = encode_categorical(df_cleaned, categorical_columns)
     st.write("**Data setelah encoding kategori:**")
     st.write(df_encoded.head(10))
